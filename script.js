@@ -10,7 +10,7 @@ function cadastrarRegistro(nome,fone,marca,modelo,cor,servico,valor) {
     var  servico = document.getElementById("servico").value;
     var valor= document.getElementById("valor").value;
    // validarFormulario();
-   // var email = document.getElementById("marca").value;
+   
     // Cria um objeto com os dados a serem enviados
     var data = {
         nome: nome,
@@ -59,7 +59,7 @@ function cadastrarRegistro(nome,fone,marca,modelo,cor,servico,valor) {
 
 
     function validarFormulario() { 
-    var nome = document.getElementById('id').value;   
+    
     var nome = document.getElementById('nome').value;
     var fone = document.getElementById('fone').value;
     var marca = document.getElementById('marca').value;
