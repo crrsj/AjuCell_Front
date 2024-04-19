@@ -23,7 +23,7 @@ function cadastrarRegistro(nome,fone,marca,modelo,cor,servico,valor) {
     };
 
     // Envia os dados para o servidor
-    fetch('http://localhost:8080/celular/adicionar', {
+    fetch('http://localhost:8080/celular', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -109,7 +109,7 @@ function cadastrarRegistro(nome,fone,marca,modelo,cor,servico,valor) {
      async function fetchDataAndPopulateTable() {
         try {
           // Substitua 'URL_DA_SUA_API' pela URL real da sua API
-          const response = await fetch( 'http://localhost:8080/celular/lista');
+          const response = await fetch( 'http://localhost:8080/celular');
           const data = await response.json();
   
           // Limpa a tabela antes de inserir novos dados
@@ -156,7 +156,7 @@ function cadastrarRegistro(nome,fone,marca,modelo,cor,servico,valor) {
     }
 
     function buscarPorId(id) {
-        fetch('http://localhost:8080/celular/busca/' + id)
+        fetch('http://localhost:8080/celular/' + id)
           .then(response => response.json())
           .then(user => {
             preencherFormulario(user) ;
@@ -185,7 +185,7 @@ function cadastrarRegistro(nome,fone,marca,modelo,cor,servico,valor) {
         
       
         try {
-          const response = await fetch(`http://localhost:8080/celular/editar`, {
+          const response = await fetch(`http://localhost:8080/celular`, {
             method: 'PUT', 
             headers: {
               'Content-Type': 'application/json',
@@ -224,7 +224,7 @@ function cadastrarRegistro(nome,fone,marca,modelo,cor,servico,valor) {
       async function deletarRegistro(id) {
         try {
           // Substitua 'URL_DA_SUA_API' pela URL real da sua API para deletar
-          const response = await fetch(`http://localhost:8080/celular/deletar/${id}`, {
+          const response = await fetch(`http://localhost:8080/celular/${id}`, {
             method: 'DELETE',
             headers: {
               'Content-Type': 'application/json',
