@@ -98,10 +98,10 @@ function cadastrarRegistro(nome,fone,marca,modelo,cor,servico,valor) {
         return false;
     }
    
-    // Se a validação passar, você pode chamar a função para salvar os registros
+    
      cadastrarRegistro(nome,fone,marca,modelo,cor,servico,valor);
 
-    // Retorna true para permitir o envio do formulário após salvar os registros
+    
     return true;
 }
 
